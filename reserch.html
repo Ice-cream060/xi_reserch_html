@@ -3,43 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>新质生产力与就业变局：基于“河海模型”的深度研究</title>
+    <title>新质生产力驱动下的就业市场变革与大学生应对策略</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500&family=Noto+Serif+SC:wght@500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&family=Noto+Serif+SC:wght@500;700;900&display=swap" rel="stylesheet">
 
     <style>
         /* 学术蓝白高级毛玻璃主题变量 */
         :root {
-            /* 冰川蓝呼吸感渐变背景 */
             --bg-gradient: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 50%, #e0f2fe 100%);
             --glass-bg: rgba(255, 255, 255, 0.65);
             --glass-border: rgba(255, 255, 255, 0.85);
-            --glass-shadow: 0 15px 45px -10px rgba(30, 64, 175, 0.12); /* 偏冷蓝色的深邃弥散阴影 */
+            --glass-shadow: 0 15px 45px -10px rgba(30, 64, 175, 0.12);
             
             --academic-blue: #1e40af; /* 核心深邃蓝 */
             --sky-blue: #3b82f6;      /* 晴空蓝点缀 */
             --ice-blue: #0ea5e9;      /* 冰晶蓝辅助 */
-            --text-main: #1e293b;     /* 深石板灰，护眼高级 */
+            --text-main: #1e293b;     /* 深石板灰 */
             --text-muted: #475569;
             --sidebar-width: 320px;
         }
 
-        /* 定制蓝水风格滚动条 */
+        /* 定制滚动条 */
         ::-webkit-scrollbar { width: 6px; }
         ::-webkit-scrollbar-track { background: transparent; }
-        ::-webkit-scrollbar-thumb { background: rgba(59, 130, 246, 0.25); border-radius: 10px; }
-        ::-webkit-scrollbar-thumb:hover { background: rgba(59, 130, 246, 0.5); }
-
-        /* 全局文本选中颜色 */
+        ::-webkit-scrollbar-thumb { background: rgba(59, 130, 246, 0.3); border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: rgba(59, 130, 246, 0.6); }
         ::selection { background: rgba(59, 130, 246, 0.2); color: var(--academic-blue); }
 
         * { box-sizing: border-box; margin: 0; padding: 0; }
         
         body {
-            font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
-            background: var(--bg-gradient);
+            font-family: 'Noto Sans SC', -apple-system, sans-serif;
+            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 50%, #e0f2fe 100%);
             background-attachment: fixed;
             color: var(--text-main);
             line-height: 1.85;
@@ -49,186 +46,181 @@
             font-weight: 300;
         }
 
-        /* 侧边栏 (高级极清毛玻璃) */
+        /* 侧边栏导航 */
         nav {
             width: var(--sidebar-width);
-            background: rgba(255, 255, 255, 0.45);
-            backdrop-filter: blur(28px) saturate(130%);
-            -webkit-backdrop-filter: blur(28px) saturate(130%);
+            background: rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(30px) saturate(150%);
+            -webkit-backdrop-filter: blur(30px) saturate(150%);
             border-right: 1px solid var(--glass-border);
             position: fixed;
             height: 100vh;
             padding: 50px 0;
             box-shadow: var(--glass-shadow);
-            z-index: 100;
+            z-index: 1000;
             overflow-y: auto;
         }
 
         nav .logo-area {
-            padding: 0 35px 35px;
+            padding: 0 35px 30px;
             position: relative;
-            margin-bottom: 25px;
+            margin-bottom: 15px;
         }
 
         nav .logo-area::after {
-            content: ''; position: absolute; bottom: 0; left: 35px; width: 45px; height: 3px;
+            content: ''; position: absolute; bottom: 0; left: 35px; width: 45px; height: 4px;
             background: linear-gradient(90deg, var(--academic-blue), var(--sky-blue));
             border-radius: 2px;
         }
 
-        nav .logo-area h2 {
-            font-family: 'Noto Serif SC', serif;
-            font-size: 1.6rem;
-            color: var(--academic-blue);
-            line-height: 1.4;
-            font-weight: 900;
-            letter-spacing: 0.02em;
-        }
+        nav .logo-area h2 { font-family: 'Noto Serif SC', serif; font-size: 1.5rem; color: var(--academic-blue); line-height: 1.4; font-weight: 900; }
+        nav .logo-area .team { font-size: 0.85rem; color: var(--sky-blue); font-weight: 500; margin-top: 8px;}
 
         nav a {
-            display: block;
-            padding: 16px 35px;
-            color: var(--text-muted);
-            text-decoration: none;
-            font-size: 0.95rem;
-            font-weight: 400;
-            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-            position: relative;
+            display: block; padding: 14px 35px; color: var(--text-muted); text-decoration: none;
+            font-size: 0.95rem; font-weight: 400; transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1); position: relative;
         }
-
         nav a::before {
             content: ''; position: absolute; left: 0; top: 0; height: 100%; width: 0;
-            background: linear-gradient(90deg, rgba(59, 130, 246, 0.08) 0%, transparent 100%);
-            transition: width 0.4s ease; z-index: -1;
+            background: linear-gradient(90deg, rgba(59, 130, 246, 0.08) 0%, transparent 100%); transition: width 0.4s ease; z-index: -1;
         }
-
-        nav a:hover, nav a.active {
-            color: var(--academic-blue);
-            font-weight: 500;
-            padding-left: 45px;
-        }
-        
+        nav a:hover, nav a.active { color: var(--academic-blue); font-weight: 500; padding-left: 45px; }
         nav a.active::before { width: 100%; }
 
         /* 主内容区 */
         main {
-            margin-left: var(--sidebar-width);
-            width: calc(100% - var(--sidebar-width));
-            padding: 60px 100px;
+            margin-left: var(--sidebar-width); width: calc(100% - var(--sidebar-width)); padding: 60px 100px;
         }
 
-        .page {
-            display: none;
-            max-width: 950px; 
-            margin: 0 auto;
-            animation: slideFadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-
+        .page { display: none; max-width: 1000px; margin: 0 auto; animation: slideFadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
         .page.active { display: block; }
+        @keyframes slideFadeIn { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
 
-        @keyframes slideFadeIn {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        /* 优雅的排版系统 */
+        /* 排版系统 */
         h1, h2, h3 { font-family: 'Noto Serif SC', serif; color: var(--academic-blue); }
-        
-        h1 { font-size: 2.8rem; margin-bottom: 50px; text-align: center; font-weight: 900; letter-spacing: 0.02em; }
-        
+        h1 { font-size: 2.8rem; margin-bottom: 50px; text-align: center; font-weight: 900; }
         h2 { font-size: 1.6rem; margin: 60px 0 25px; display: flex; align-items: center; font-weight: 700; }
         h2::before {
             content: ''; display: inline-block; width: 4px; height: 22px; 
             background: linear-gradient(180deg, var(--academic-blue), var(--sky-blue)); 
             margin-right: 15px; border-radius: 4px;
         }
-        
         h3 { font-size: 1.25rem; color: var(--sky-blue); margin: 35px 0 15px; font-weight: 700; }
-        
         p { margin-bottom: 1.6em; text-align: justify; font-size: 1.05rem; }
-        ul, ol { margin-bottom: 1.6em; padding-left: 28px; font-size: 1.05rem; }
-        li { margin-bottom: 10px; }
-        strong { font-weight: 500; color: #0f172a; }
+        ul { margin-bottom: 1.6em; padding-left: 28px; font-size: 1.05rem; }
+        li { margin-bottom: 12px; }
+        strong { font-weight: 600; color: #0f172a; }
 
-        .cite { color: #94a3b8; font-size: 0.8rem; font-family: -apple-system, sans-serif; margin-left: 3px; vertical-align: super; font-style: italic; }
+        /* 高级链接按钮 */
+        .link-btn {
+            display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px; margin-top: 15px; margin-bottom: 20px;
+            background: linear-gradient(135deg, var(--academic-blue), var(--sky-blue));
+            color: #ffffff; text-decoration: none; font-size: 0.95rem; font-weight: 500;
+            border-radius: 8px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+        }
+        .link-btn:hover { transform: translateY(-3px); box-shadow: 0 10px 25px rgba(59, 130, 246, 0.5); color: #fff; }
 
-        /* 高级玻璃卡片 */
+        /* 卡片组件 */
         .glass-panel {
-            background: var(--glass-bg);
-            backdrop-filter: blur(24px) saturate(140%);
-            -webkit-backdrop-filter: blur(24px) saturate(140%);
-            border: 1px solid var(--glass-border);
-            border-radius: 20px;
-            padding: 45px;
-            margin-bottom: 35px;
-            box-shadow: var(--glass-shadow);
-            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+            background: var(--glass-bg); backdrop-filter: blur(24px) saturate(140%);
+            border: 1px solid var(--glass-border); border-radius: 20px; padding: 45px; margin-bottom: 35px;
+            box-shadow: var(--glass-shadow); transition: all 0.4s ease;
         }
-        
-        .glass-panel:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 25px 60px -15px rgba(30, 64, 175, 0.15);
-            background: rgba(255, 255, 255, 0.8);
-        }
+        .glass-panel:hover { transform: translateY(-4px); background: rgba(255, 255, 255, 0.85); box-shadow: 0 20px 50px -10px rgba(30, 64, 175, 0.15); }
 
-        /* 数据网格 */
-        .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; margin: 35px 0; }
-        
+        /* ================= 核心特色布局区 ================= */
+
+        /* 1. 时空网格背景布局 (Chapter 2) */
+        .grid-bg-wrapper {
+            position: relative; padding: 50px; border-radius: 24px; margin-bottom: 40px; overflow: hidden;
+            background-color: #f8fafc;
+            background-image: 
+                linear-gradient(rgba(30, 64, 175, 0.06) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(30, 64, 175, 0.06) 1px, transparent 1px);
+            background-size: 30px 30px;
+            border: 1px solid var(--glass-border); box-shadow: inset 0 0 50px rgba(255,255,255,0.8);
+        }
+        .grid-content-flex { display: flex; gap: 30px; position: relative; z-index: 2; }
+        .grid-card {
+            background: rgba(255,255,255,0.88); backdrop-filter: blur(12px); padding: 35px; border-radius: 16px; flex: 1;
+            border-left: 4px solid var(--academic-blue); box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: 0.3s;
+        }
+        .grid-card:hover { transform: scale(1.02); }
+
+        /* 2. 动态数据卡片 (Chapter 5) */
+        .grid-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; margin: 35px 0; }
         .stat-card {
-            background: linear-gradient(145deg, rgba(255,255,255,0.9) 0%, rgba(240,249,255,0.5) 100%);
-            padding: 30px 20px;
-            border-radius: 16px;
-            border-top: 3px solid var(--sky-blue);
-            text-align: center;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+            background: linear-gradient(145deg, rgba(255,255,255,0.95) 0%, rgba(240,249,255,0.6) 100%);
+            padding: 35px 20px; border-radius: 16px; border-top: 4px solid var(--sky-blue);
+            text-align: center; transition: all 0.4s ease; box-shadow: 0 5px 20px rgba(0,0,0,0.03);
         }
-        .stat-card:hover { transform: scale(1.02); }
-        .stat-card .num { font-family: 'Noto Serif SC', serif; font-size: 2.5rem; font-weight: 900; color: var(--academic-blue); margin-bottom: 5px; }
-        .stat-card .label { font-size: 0.95rem; color: var(--text-muted); line-height: 1.5; font-weight: 400;}
+        .stat-card:hover { transform: translateY(-8px); box-shadow: 0 15px 30px rgba(59,130,246,0.15); }
+        .stat-card .num-container { font-family: 'Noto Serif SC', serif; font-size: 2.8rem; font-weight: 900; color: var(--academic-blue); margin-bottom: 5px; display: flex; justify-content: center; align-items: baseline;}
+        .stat-card .suffix { font-size: 1.5rem; margin-left: 5px; color: var(--sky-blue);}
+        .stat-card .label { font-size: 0.95rem; color: var(--text-muted); line-height: 1.6; }
 
-        /* 极简学术表格 */
-        table { width: 100%; border-collapse: collapse; margin: 35px 0; background: rgba(255,255,255,0.7); border-radius: 12px; overflow: hidden; font-size: 0.95rem; box-shadow: 0 2px 10px rgba(0,0,0,0.02); }
-        th, td { border-bottom: 1px solid rgba(59, 130, 246, 0.1); padding: 18px 20px; text-align: left; }
-        th { background: rgba(59, 130, 246, 0.05); color: var(--academic-blue); font-weight: 500; }
-        tr:last-child td { border-bottom: none; }
-        tr:hover td { background: rgba(255, 255, 255, 0.9); }
-
-        /* 首页特定样式 */
-        .hero-banner { text-align: center; padding: 70px 20px; }
-        .hero-banner h1 { 
-            font-size: 3.5rem; margin-bottom: 20px; 
-            background: linear-gradient(120deg, #1e40af, #0ea5e9); 
-            -webkit-background-clip: text; -webkit-text-fill-color: transparent; 
-        }
-        .hero-banner .subtitle { font-family: 'Noto Serif SC', serif; font-size: 1.4rem; color: var(--text-muted); font-weight: 500; margin-bottom: 50px; letter-spacing: 0.05em; }
-        
-        .nav-cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; }
-        .nav-card {
-            background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 20px; padding: 40px;
-            cursor: pointer; transition: all 0.4s ease; text-align: left;
-            box-shadow: 0 10px 30px -10px rgba(30,64,175,0.05);
-        }
-        .nav-card:hover { transform: translateY(-8px); box-shadow: 0 20px 45px -10px rgba(30,64,175,0.15); border-color: rgba(59, 130, 246, 0.4); }
-        .nav-card h3 { margin-top: 0; color: var(--academic-blue); font-size: 1.5rem; display: flex; align-items: center; gap: 12px;}
-
-        /* Canvas 互动区 */
+        /* 3. 可点击模型区 (Chapter 6) */
         .canvas-container {
-            width: 100%; height: 500px; background: linear-gradient(to bottom, rgba(255,255,255,0.8), rgba(240,249,255,0.5)); border-radius: 20px;
-            overflow: hidden; position: relative; margin: 40px 0; cursor: pointer; border: 1px solid var(--glass-border);
-            box-shadow: inset 0 0 50px rgba(59, 130, 246, 0.05);
+            width: 100%; height: 550px; background: linear-gradient(to bottom, rgba(255,255,255,0.9), rgba(240,249,255,0.6)); border-radius: 20px;
+            overflow: hidden; position: relative; margin: 40px 0; border: 1px solid var(--glass-border); box-shadow: inset 0 0 50px rgba(59, 130, 246, 0.05);
         }
         canvas { display: block; width: 100%; height: 100%; }
-        
-        /* 突出显示框 (极简引语风格) */
-        .highlight-box {
-            background: linear-gradient(90deg, rgba(59, 130, 246, 0.06) 0%, rgba(255,255,255,0) 100%);
-            border-left: 3px solid var(--sky-blue);
-            padding: 30px 40px;
-            border-radius: 0 16px 16px 0;
-            margin-top: 30px;
-            font-style: normal;
+        .hotspot {
+            position: absolute; padding: 10px 18px; border-radius: 30px; background: rgba(255,255,255,0.85); backdrop-filter: blur(10px);
+            border: 1px solid rgba(59, 130, 246, 0.3); font-weight: 600; color: var(--academic-blue); font-size: 0.9rem;
+            cursor: pointer; display: flex; align-items: center; gap: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: all 0.3s ease; z-index: 10; transform: translate(-50%, -50%);
         }
+        .hotspot:hover { background: var(--academic-blue); color: #fff; transform: translate(-50%, -55%) scale(1.05); box-shadow: 0 10px 25px rgba(30,64,175,0.3); }
+        .pulse-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--sky-blue); animation: pulse 1.5s infinite; }
+        .hotspot:hover .pulse-dot { background: #fff; }
+        @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.7); } 70% { box-shadow: 0 0 0 10px rgba(59, 130, 246, 0); } 100% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0); } }
+
+        /* 4. 三分化圆环简历策略图 (Chapter 7) */
+        .orbit-wrapper { position: relative; width: 100%; max-width: 850px; height: 650px; margin: 50px auto; }
+        .orbit-center {
+            position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+            width: 160px; height: 160px; border-radius: 50%;
+            background: linear-gradient(135deg, var(--academic-blue), var(--sky-blue));
+            color: #fff; display: flex; align-items: center; justify-content: center; flex-direction: column;
+            font-size: 1.3rem; font-weight: 900; text-align: center; box-shadow: 0 15px 35px rgba(30,64,175,0.4); z-index: 5;
+        }
+        .orbit-center span { font-size: 0.8rem; font-weight: 400; opacity: 0.8; margin-top: 5px; }
+        
+        .orbit-node {
+            position: absolute; width: 280px; height: 280px; border-radius: 50%;
+            background: rgba(255,255,255,0.95); border: 2px solid rgba(59, 130, 246, 0.15);
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+            text-align: center; padding: 25px; box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1); cursor: pointer; z-index: 4;
+        }
+        .node-top { top: 0; left: 50%; transform: translateX(-50%); }
+        .node-bl { bottom: 20px; left: 10px; }
+        .node-br { bottom: 20px; right: 10px; }
+
+        .orbit-node h4 { color: var(--academic-blue); margin-bottom: 8px; font-size: 1.3rem; display: flex; align-items: center; gap: 8px;}
+        .orbit-node .default-text { font-size: 1rem; color: #64748b; font-weight: 500; line-height: 1.6;}
+        
+        /* 交互悬浮内容样式 */
+        .hover-content { display: none; text-align: left; font-size: 0.9rem; line-height: 1.6; color: var(--text-muted); }
+        .method-tag { 
+            color: var(--academic-blue); font-weight: bold; font-size: 0.85rem;
+            display: block; border-bottom: 1px dashed rgba(59,130,246,0.3); 
+            padding-bottom: 3px; margin-bottom: 5px; margin-top: 8px;
+        }
+        
+        /* 悬停展开特效 */
+        .orbit-node:hover { transform: scale(1.15); z-index: 10; background: #fff; border-color: var(--sky-blue); box-shadow: 0 25px 50px rgba(30,64,175,0.15); }
+        .node-top:hover { transform: translateX(-50%) scale(1.15); }
+        .orbit-node:hover .default-text { display: none; }
+        .orbit-node:hover .hover-content { display: block; animation: fadeIn 0.4s ease forwards; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(5px);} to { opacity: 1; transform: translateY(0);} }
+
+        /* Banner结构 */
+        .hero-banner { text-align: center; padding: 60px 20px 40px; }
+        .hero-banner h1 { font-size: 3.2rem; margin-bottom: 15px; background: linear-gradient(120deg, #1e40af, #0ea5e9); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .hero-banner .subtitle { font-family: 'Noto Serif SC', serif; font-size: 1.3rem; color: var(--text-muted); font-weight: 500; margin-bottom: 30px; letter-spacing: 0.05em; }
+        .hero-banner .quote { font-size: 1.05rem; color: #64748b; font-style: italic; max-width: 80%; margin: 0 auto; line-height: 1.8; border-left: 3px solid var(--sky-blue); padding-left: 20px;}
 
     </style>
 </head>
@@ -236,378 +228,387 @@
 
     <nav>
         <div class="logo-area">
-            <h2>新质生产力<br>与就业研究报告</h2>
+            <h2>新质生产力与就业变局</h2>
+            <div class="team">研究小组：人民当家作组</div>
         </div>
-        <a href="#home" class="active" onclick="switchPage('home')">首页概述与逻辑框架</a>
-        <a href="#background" onclick="switchPage('background')">第一章：时代背景与底层逻辑</a>
-        <a href="#policy" onclick="switchPage('policy')">第二章：政策演进与战略部署</a>
-        <a href="#market" onclick="switchPage('market')">第三章：市场响应与企业转型</a>
-        <a href="#employment" onclick="switchPage('employment')">第四章：就业市场量化变动</a>
-        <a href="#model" onclick="switchPage('model')">第五章：核心理论与河海模型</a>
-        <a href="#strategy" onclick="switchPage('strategy')">第六章：破局策略与工具赋能</a>
+        <a href="#home" class="active" onclick="switchPage('home')">01 引言：宏观至微观</a>
+        <a href="#background" onclick="switchPage('background')">02 背景：时空交汇的必然</a>
+        <a href="#policy" onclick="switchPage('policy')">03 顶层设计：政策传导</a>
+        <a href="#market" onclick="switchPage('market')">04 市场主体：巨头转身</a>
+        <a href="#employment" onclick="switchPage('employment')">05 就业市场：量化变局</a>
+        <a href="#model" onclick="switchPage('model')">06 核心理论：河海模型</a>
+        <a href="#strategy" onclick="switchPage('strategy')">07 破局之道：简历三分图</a>
+        <a href="#reference" onclick="switchPage('reference')">08 平台开源与致谢</a>
     </nav>
 
     <main>
         
         <div id="home" class="page active">
             <div class="hero-banner">
-                <h1>新质生产力与就业变局</h1>
-                <div class="subtitle">从国家战略的宏观演进到大学生求职的微观破局</div>
+                <h1>新质生产力驱动下的就业变革</h1>
+                <div class="subtitle">与当代大学生破局应对策略</div>
+                <div class="quote">“时代中的一粒灰，落在个人那里，可能就是一座山。而我们偏偏处在一个尘土飞扬的时代之中。”<br>—— 探究就业这个最基本的民生</div>
             </div>
 
             <div class="glass-panel">
-                <h2>整体研究思路与演讲形式</h2>
-                <p>本研究采用<strong>“案件陈述”</strong>的创新演讲形式展开<span class="cite"></span>。正如马克思用货币推导出整个资本市场，我们尝试以当代大学生的“简历”与就业困境作为切入点，引入如今市场的急剧变化<span class="cite"></span>。基于马克思主义思想中“社会意识反作用于社会存在”和“生产力是一切发展之根本”的启示，我们将就业市场的巨变追溯至“新质生产力”的提出<span class="cite"></span>。</p>
-                <p>整个报告沿着一条清晰的传导链条：<strong>“新质生产力概念 -> 国家战略 -> 政府决策 -> 市场变动 -> 就业调整 -> 学生应聘”</strong><span class="cite"></span>。最终，我们抽象出“河海互动模型”，并给出在当前时代背景下，如何利用前沿技术重塑简历与个人能力矩阵的破局策略<span class="cite"></span>。</p>
-            </div>
-
-            <div class="nav-cards">
-                <div class="nav-card" onclick="switchPage('background')">
-                    <h3>🔍 追溯本源</h3>
-                    <p>解析人口红利断档、资本回报率下降及外部科技博弈带来的时代倒逼效应<span class="cite"></span>。</p>
-                </div>
-                <div class="nav-card" onclick="switchPage('market')">
-                    <h3>🏢 市场实证</h3>
-                    <p>深扒高技术产业投资的资金流向，以及三一集团、法士特等企业的底层转型<span class="cite"></span>。</p>
-                </div>
-                <div class="nav-card" onclick="switchPage('employment')">
-                    <h3>📊 就业量化</h3>
-                    <p>直击 1270 万毕业生背后的供需剪刀差，以及新质生产力领域的岗位爆发<span class="cite"></span>。</p>
-                </div>
-                <div class="nav-card" onclick="switchPage('model')">
-                    <h3>🌊 河海模型</h3>
-                    <p>运用可视化动态体系，展示时代浪潮、政策降雨与个体浪花的协同共生关系<span class="cite"></span>。</p>
-                </div>
+                <h2>整体思路：“案件陈述”演绎法</h2>
+                <p>马克思曾以“货币”作为切入点，推导出整个资本市场的运行规律。今天，我们尝试以当代大学生的<strong>“简历”</strong>与就业困境作为切入点，追溯整个生产力变革的传导机制。</p>
+                <p>基于“生产力是人类社会发展的根本动力”，本报告沿着一条清晰的线索展开：从国家宏观战略（顶层设计）、政府政策下达、企业顺势转型，最终传导至微观个体的就业调整。我们希望不仅解析现象，更能提供解决问题的关键“钥匙”。</p>
             </div>
         </div>
 
         <div id="background" class="page">
-            <h1>时代背景与提出的底层逻辑</h1>
-            <div class="glass-panel">
-                <h2>一、 内部压力：传统动能触及临界点</h2>
-                <p>到了2023年前后，支撑中国过去40年高速增长的传统动力已呈现明显的边际递减效应，换引擎迫在眉睫<span class="cite"></span>。</p>
-                <ul>
-                    <li><strong>人口红利向人才红利的断档焦虑：</strong> 2022年，中国人口出现近61年来的首次负增长<span class="cite"></span>。劳动力绝对减少意味着“铺摊子、堆人头”模式走入死胡同，必须尽快用高素质劳动者（新质生产力要素）替代普通劳动力，度过向工程师红利切换的阵痛期<span class="cite"></span>。</li>
-                    <li><strong>资本回报率下降与债务约束：</strong> 传统基建和房地产投资边际收益递减<span class="cite"></span>。2023年固定资产投资增速与GDP增速比值收窄，单纯砸钱已难以拉动同等规模增长，倒逼经济转向依赖全要素生产率的提升<span class="cite"></span>。</li>
-                </ul>
-            </div>
-
-            <div class="glass-panel">
-                <h2>二、 外部倒逼：大国博弈与抢占窗口期</h2>
-                <p>2023年是外部科技封锁与竞争态势急剧升温的一年，客观上形成了“倒逼式改革”的强压环境<span class="cite"></span>。</p>
-                <ul>
-                    <li><strong>“卡脖子”技术的切肤之痛：</strong> 2022-2023年间，针对华半导体（特别是AI芯片和先进制程设备）的出口管制加码。决策层深刻意识到，缺乏原创性、颠覆性技术，产业链安全无从谈起<span class="cite"></span>。</li>
-                    <li><strong>第四次工业革命的入场券：</strong> 2023年是生成式AI（如ChatGPT）爆发元年，全球科技竞争进入换道超车阶段。若不提出高科技、高效能新战略，可能在下一轮产业分工中被固化在中低端<span class="cite"></span>。</li>
-                    <li><strong>“十四五”承上启下：</strong> 在2023年9月提出新质生产力，不仅确认了数字经济规模突破50万亿等前半程转型成果，更为后半程高质量发展提供了理论武器<span class="cite"></span>。</li>
-                </ul>
+            <h1>提出的背景：时空交汇的必然感</h1>
+            <p style="text-align: center; color: var(--text-muted); margin-bottom: 40px;">在历史的坐标轴上，新质生产力的提出绝非偶然，而是时局逼迫下的战略抉择。</p>
+            
+            <div class="grid-bg-wrapper">
+                <div class="grid-content-flex">
+                    <div class="grid-card">
+                        <h3 style="margin-top: 0;">🌐 横向：世界与空间格局</h3>
+                        <p><strong>大国博弈的外部倒逼：</strong><br>“卡脖子”技术的切肤之痛在2023年达到顶峰（特别是对华AI芯片与先进制程设备的封锁）。在第四次工业革命（生成式AI爆发）的窗口期，全球竞争从“弯道超车”进入“换道超车”。</p>
+                        <p>如果不立即提出以高科技、高效能为导向的新战略，中国极有可能在下一轮全球产业分工中被固化在中低端，产业链安全无从谈起。</p>
+                    </div>
+                    
+                    <div class="grid-card">
+                        <h3 style="margin-top: 0;">⏳ 纵向：历史与时间传承</h3>
+                        <p><strong>内部红利切换的阵痛：</strong><br>2022年，中国人口出现近61年来的首次负增长。传统依托“铺摊子、堆人头”的劳动力数量红利走到尽头。此外，资本回报率持续下降，旧引擎面临熄火。</p>
+                        <p>2023年正值“十四五”规划承上启下的关键年，此时提出新质生产力，是对从“科学技术是第一生产力”到“创新是第一动力”历史逻辑的自然延续与升华。</p>
+                    </div>
+                </div>
             </div>
         </div>
 
         <div id="policy" class="page">
-            <h1>政策演进与战略部署</h1>
+            <h1>顶层设计的传导：从中央到地方</h1>
             <div class="glass-panel">
-                <h2>一、 核心国家文件指引</h2>
-                <table>
-                    <tr>
-                        <th style="width: 35%;">文件名称与发布时间</th>
-                        <th>核心战略导向</th>
-                    </tr>
-                    <tr>
-                        <td>《中共中央关于进一步全面深化改革 推进中国式现代化的决定》<br><span style="font-size: 0.85em; color: var(--text-muted);">(2024年7月21日)</span><span class="cite"></span></td>
-                        <td>健全因地制宜发展新质生产力体制机制，推动战略性新兴产业、未来产业发展壮大，构建现代化产业体系<span class="cite"></span>。</td>
-                    </tr>
-                    <tr>
-                        <td>《关于制定国民经济和社会发展第十五个五年规划的建议》<br><span style="font-size: 0.85em; color: var(--text-muted);">(2025年10月28日)</span><span class="cite"></span></td>
-                        <td>将发展新质生产力作为高质量发展核心任务。培育新能源、人工智能、生物制造，前瞻布局量子信息、6G等<span class="cite"></span>。</td>
-                    </tr>
-                    <tr>
-                        <td>2025年《政府工作报告》<br><span style="font-size: 0.85em; color: var(--text-muted);">(2025年3月12日)</span><span class="cite"></span></td>
-                        <td>以新质生产力驱动产业升级、带动就业结构优化、改善民生福祉<span class="cite"></span>。</td>
-                    </tr>
-                    <tr>
-                        <td>《关于推动未来产业创新发展的实施意见》<br><span style="font-size: 0.85em; color: var(--text-muted);">(2024年1月29日)</span><span class="cite"></span></td>
-                        <td>推动创新成果场景化应用落地，催生新职业、新岗位与新就业形态<span class="cite"></span>。</td>
-                    </tr>
-                </table>
+                <h2>一、 核心国家战略定调</h2>
+                <ul>
+                    <li><strong>2024年7月：</strong>《中共中央关于进一步全面深化改革 推进中国式现代化的决定》明确提出“健全因地制宜发展新质生产力体制机制”。</li>
+                    <li><strong>2025年10月：</strong>《十五五规划建议》将“发展新质生产力”作为核心任务，前瞻布局量子信息、6G等未来产业。</li>
+                    <li><strong>2025年3月：</strong>《政府工作报告》强调，推动科技与产业创新深度融合，以新质生产力带动就业结构优化。</li>
+                </ul>
             </div>
             
             <div class="glass-panel">
-                <h2>二、 地方政府政策响应：以广东省为例</h2>
-                <p>根据《广东省加快培育发展新赛道引领现代化产业体系建设行动规划（2026—2035年）》<span class="cite"></span>，政策落地带来了极具前瞻性的产业规划：</p>
+                <h2>二、 地方政策细化：以广东为例</h2>
+                <p>广东出台《加快培育发展新赛道引领现代化产业体系建设行动规划（2026—2035年）》，犹如一场“及时雨”精准落入产业集群：</p>
                 <ul>
-                    <li><strong>明确 53 个新赛道方向：</strong> 围绕智能链接、生物融合、先进制造等6大领域，重点发展人工智能、智能人形机器人、固态电池、6G、低空经济等前沿领域<span class="cite"></span>。</li>
-                    <li><strong>宏大经济目标：</strong> 提出到2035年新赛道产业及市场规模突破 10 万亿元，打造全球新赛道发展引领地<span class="cite"></span>。</li>
-                    <li><strong>催生新兴岗位：</strong> 这些规划直接指引了大学生就业方向，催生了 AI 训练师、无人机飞手、量子算法工程师等大量新兴岗位<span class="cite"></span>。</li>
+                    <li><strong>锁定 53 个新赛道：</strong>全盘覆盖人工智能、智能人形机器人、低空经济、商业航天等前沿领域。</li>
+                    <li><strong>经济大盘目标：</strong>提出到2035年新赛道产业及市场规模突破 <strong>10 万亿元</strong>。</li>
+                    <li><strong>催生就业新形态：</strong>战略落地直接催生了诸如AI训练师、无人机飞手、固态电池研发员等海量新兴高薪岗位。</li>
                 </ul>
             </div>
         </div>
 
         <div id="market" class="page">
-            <h1>资金流向与企业转型微观实证</h1>
+            <h1>市场主体响应：巨头的跨界与转身</h1>
+            <p style="text-align: center; color: var(--text-muted); margin-bottom: 30px;">企业响应政策才能享受时代红利，顺势而为才能打破增长的天花板。</p>
+
             <div class="glass-panel">
-                <h2>一、 市场资金投入的变化与倾向</h2>
-                <p>进入2026年一季度，随着“十五五”规划开局，资金不仅在总量上向高技术产业倾斜，在结构上也呈现出政府引导、民间跟进的态势<span class="cite"></span>。</p>
-                <div class="grid-3">
-                    <div class="stat-card">
-                        <div class="num">7.4%</div>
-                        <div class="label">高技术产业投资同比增长<br><span style="font-size:0.85em">(远超全国固投1.7%增速)</span><span class="cite"></span></div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="num">13.9%</div>
-                        <div class="label">设备工器具购置投资增速<br><span style="font-size:0.85em">(占总投资比重提升至18.4%)</span><span class="cite"></span></div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="num">29.5%</div>
-                        <div class="label">专业技术服务业投资增速<br><span style="font-size:0.85em">(市场对软性技术价值重估)</span><span class="cite"></span></div>
-                    </div>
-                </div>
-                <p>此外，中央预算内投资 7550 亿元、超长期特别国债 1 万亿元等政策性资金，正在重点投向“人工智能+”基础设施与城市更新<span class="cite"></span>。</p>
+                <h2>企业案例一：大疆 (DJI) —— 抢占低空经济与空间智能</h2>
+                <p>响应国家低空经济战略，大疆从单一的航拍消费品，全面深入农业植保、应急救援、低空物流等实体场景。更震撼的是，它将沉淀的机器视觉与深度学习算法平移至新能源汽车赛道，孵化“大疆车载”（卓驭科技），完成了从“飞行器制造”向“空间智能生产力工具”的跨界进化。</p>
+                <a href="https://www.dji.com/cn" target="_blank" class="link-btn">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                    大疆官网：了解空间智能生态
+                </a>
             </div>
 
             <div class="glass-panel">
-                <h2>二、 市场主体重塑：企业转型案例</h2>
-                <p><strong>案例一：三一集团（传统制造业的“换芯”运动）</strong><br>
-                2026年三一明确提出向“AI原生的机器人公司”转型。通过算法与数据驱动，使机械装备具备视觉语言模型的感知与决策能力，验证了矿山无人驾驶商业化，开辟了“运力承包”新商业模式<span class="cite"></span>。</p>
-                <br>
-                <p><strong>案例二：宁波一创金属（小微企业的“换道超车”）</strong><br>
-                一家传统机械加工厂切入具身智能赛道，从“简单代工”升级为“联合研发”。随着2025年具身智能写入政府报告，其产值从 200 多万元猛增至 2000 多万元，覆盖了从灵巧手到连杆的全链条<span class="cite"></span>。</p>
-                <br>
-                <p><strong>案例三：法士特集团（全栈自研重构生态）</strong><br>
-                新增年产12万台中重型电驱总成项目投产（投资近3亿元），坚持“变速器+电机+电控”全栈自研，拥有超300项新能源专利，重塑了重卡产业链生态<span class="cite"></span>。</p>
+                <h2>企业案例二：萝卜快跑 (Baidu) —— 智能网联的先行落地</h2>
+                <p>面对移动互联网红利见顶，百度乘着深圳出台《智能网联汽车管理条例》的政策东风，依托全球首个自动驾驶大模型（ADFM），在多地推进全无人自动驾驶商业化运营。这标志着它从纯线上的搜索引擎，实质性蜕变为线下实体智慧交通的运营者。</p>
+                <a href="https://luobo.baidu.com/" target="_blank" class="link-btn">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                    萝卜快跑官网：体验无人驾驶商用
+                </a>
             </div>
         </div>
 
         <div id="employment" class="page">
-            <h1>2026 就业市场量化图谱</h1>
-            <div class="glass-panel">
-                <h2>一、 核心宏观供需挑战</h2>
-                <p>2026年一季度，虽然全国城镇调查失业率为 5.2% 保持稳定，但 <strong>16-24 岁青年失业率达 16.5%</strong>，就业压力依然集中在青年群体<span class="cite"></span>。</p>
-                <p>2026 届全国普通高校毕业生预计达到创历史新高的 <strong>1270 万人</strong>（同比增加48万）。春招市场平均供需比逼近 2:1，而互联网、金融等热门岗位报录比高达 200:1 甚至 1000:1<span class="cite"></span>。</p>
+            <h1>就业市场大变局：冰火两重天</h1>
+            
+            <div class="grid-cards" id="stats-container">
+                <div class="stat-card">
+                    <div class="num-container"><span class="count-num" data-target="16.5">0</span><span class="suffix">%</span></div>
+                    <div class="label">青年失业率 (16-24岁)<br>达全国平均水平的三倍多</div>
+                </div>
+                <div class="stat-card">
+                    <div class="num-container"><span class="count-num" data-target="1270">0</span><span class="suffix">万+</span></div>
+                    <div class="label">2026届高校毕业生规模<br>创历史新高，竞争空前</div>
+                </div>
+                <div class="stat-card">
+                    <div class="num-container"><span class="count-num" data-target="543">0</span><span class="suffix">%</span></div>
+                    <div class="label">AI 相关岗位同比增长<br>求人倍率达 3.5 : 1</div>
+                </div>
             </div>
 
             <div class="glass-panel">
-                <h2>二、 行业需求与岗位的极端分化</h2>
-                <p>新质生产力直接导致了就业冰火两重天的局面：</p>
+                <h2>岗位需求的两极重塑</h2>
                 <ul>
-                    <li><strong>新兴领域爆发：</strong> 2026年 Q1，AI 相关岗位需求同比增长 <strong>543%</strong>，求人倍率达 3.5:1；工业与人形机器人岗位招聘量同比增长超 400%<span class="cite"></span>。</li>
-                    <li><strong>传统领域收缩：</strong> 基础行政、低端销售、传统互联网非核心岗需求萎缩，供需比普遍达 7:1 以上<span class="cite"></span>。</li>
-                </ul>
-                <p>在岗位类型上，AI 科学家、算法研究员、AI 提示词工程师等岗位成为核心增长点，全面覆盖技术研发与落地全链条<span class="cite"></span>。</p>
-            </div>
-
-            <div class="glass-panel">
-                <h2>三、 招聘会实地调研数据（深圳秋招收官）</h2>
-                <p>以2025年12月深圳会展中心举办的“粤聚英才 粤见未来”大型招聘会为例<span class="cite"></span>：</p>
-                <ul>
-                    <li><strong>企业阵容强悍：</strong> 汇聚 1825 家单位，包含超 40 家世界500强（华为、腾讯等），超 400 家“专精特新”企业，及超 50 家科研院所<span class="cite"></span>。</li>
-                    <li><strong>人才虹吸效应：</strong> 现场吸引近 15 万名求职者入场，释放 6.5 万余个优质岗位<span class="cite"></span>。</li>
-                    <li><strong>高薪岗位涌现：</strong> 其中年薪 20-50 万元岗位超 1700 个，50-100 万元岗位超 680 个，顶尖科研岗位年薪直接破百万<span class="cite"></span>。</li>
+                    <li><strong>新质领域爆发式扩招：</strong>随着生产力转移，2026 年工业机器人、人形机器人岗位招聘量同比增长超 <span style="color:var(--academic-blue); font-weight:bold;">400%</span>。行业急需涵盖技术研发、应用落地、伦理合规全链条的复合人才。</li>
+                    <li><strong>传统领域断崖式萎缩：</strong>基础行政、低端销售、传统互联网非核心岗等重复性岗位受 AI 冲击，需求持续萎缩，供需比普遍突破 <strong>7:1</strong>，薪水阶层出现固化。</li>
+                    <li><strong>面试标准升维：</strong>对于高薪岗位，如今通常面临 3-4 轮面试，从 OA 机试的硬性淘汰，到“手撕代码”考查鲁棒性，再到深挖项目逻辑，考核极其硬核。</li>
                 </ul>
             </div>
         </div>
 
         <div id="model" class="page">
-            <h1>核心理论：“河海互动”动态模型</h1>
-            <div class="glass-panel">
-                <p>在梳理了从国家宏观战略到微观就业市场的全链条后，我们总结提炼出一个直观的 <strong>“河-海模型”</strong>，帮助理解新质生产力改变社会的生态过程<span class="cite"></span>：</p>
-                <ul>
-                    <li><strong>🌊 时代海浪：</strong> 代表当下宏观的社会现象与普遍的就业困境<span class="cite"></span>。</li>
-                    <li><strong>💨 升腾水蒸气：</strong> 我们通过调研总结出的痛点与理论提炼<span class="cite"></span>。</li>
-                    <li><strong>☁️ 汇聚云层：</strong> 中央作为高层统筹，根据时代痛点下发战略与决策文件<span class="cite"></span>。</li>
-                    <li><strong>🌧️ 化作雨水 / 🏞️ 分支河流：</strong> 政策层层传导，地方与企业积极响应，形成改变市场的产业河流<span class="cite"></span>。</li>
-                    <li><strong>💧 奔涌浪花：</strong> 我们每一位顺应时代、调整自我、投递简历的青年学生，正是这股新质生产力洪流中激起的璀璨浪花<span class="cite"></span>。</li>
-                </ul>
-                
+            <h1>传导枢纽：“河-海互动”模型</h1>
+            <div class="glass-panel" style="padding-bottom: 20px;">
+                <p>我们将上述的抽象宏观规律，具象化为一套直观的自然生态循环系统：</p>
                 <div class="canvas-container" id="canvas-wrapper">
-                    <canvas id="ecoCanvas"></canvas>
-                    <div style="position: absolute; bottom: 15px; right: 25px; font-size: 0.85rem; color: #475569; font-family: 'Noto Sans SC'; font-weight: 400; background: rgba(255,255,255,0.85); padding: 6px 12px; border-radius: 6px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
-                        * 交互提示：长按画布区域可加速政策“降雨”反馈
+                    <div class="hotspot" style="top: 18%; left: 50%;" onclick="switchPage('policy')" title="点击查看：国家战略规划">
+                        <div class="pulse-dot"></div> ☁️ 中央云层 (顶层设计)
                     </div>
+                    <div class="hotspot" style="top: 40%; left: 75%;" onclick="switchPage('market')" title="点击查看：市场企业案例">
+                        <div class="pulse-dot"></div> 🌧️ 政策降雨 (企业响应)
+                    </div>
+                    <div class="hotspot" style="bottom: 25%; right: 25%;" onclick="switchPage('employment')" title="点击查看：就业结构变局">
+                        <div class="pulse-dot"></div> 🏞️ 产业河流 (市场大盘)
+                    </div>
+                    <div class="hotspot" style="bottom: 15%; left: 20%;" onclick="switchPage('background')" title="点击查看：历史必然背景">
+                        <div class="pulse-dot"></div> 🌊 时代海浪 (社会现象)
+                    </div>
+                    <div class="hotspot" style="bottom: 40%; left: 25%;" onclick="switchPage('strategy')" title="点击查看：个人破局之策">
+                        <div class="pulse-dot"></div> 💨 水蒸气/浪花 (个体觉醒)
+                    </div>
+                    
+                    <canvas id="ecoCanvas"></canvas>
                 </div>
             </div>
         </div>
 
         <div id="strategy" class="page">
-            <h1>基于新质生产力的破局与简历优化</h1>
+            <h1>个人破局之道：简历策略三分图</h1>
+            <p style="text-align: center; color: var(--text-muted); margin-bottom: 30px;">政策生效与市场响应存在时间差，这正是我们提前布局的窗口期。请将鼠标悬浮查看破局三维度。</p>
+            
+            <div class="orbit-wrapper">
+                <div class="orbit-center">
+                    简历破局<br><span>(三维方法论)</span>
+                </div>
+                
+                <div class="orbit-node node-top">
+                    <h4>🧭 方向选择</h4>
+                    <div class="default-text">求职取向<br><span style="font-size:0.85em; color:var(--sky-blue)">(悬停查看详情)</span></div>
+                    
+                    <div class="hover-content">
+                        <span class="method-tag">【方法论】</span>
+                        观察国家战略与企业转型（顺势而为、因地制宜），寻找市场的价值缺口。
+                        <span class="method-tag">【实战案例】</span>
+                        面对大模型代码能力普及化，结合自身优势避开纯技术内卷，锚定具备综合管理需求的 <strong>AI 产品经理</strong> 与 <strong>AI 伦理评判岗</strong>。
+                    </div>
+                </div>
+                
+                <div class="orbit-node node-br">
+                    <h4>✍️ 精准表达</h4>
+                    <div class="default-text">内容书写<br><span style="font-size:0.85em; color:var(--sky-blue)">(悬停查看详情)</span></div>
+                    
+                    <div class="hover-content">
+                        <span class="method-tag">【方法论】</span>
+                        针对新赛道岗位技能要求，结合实际项目进行底层语言逻辑的转化。
+                        <span class="method-tag">【实战案例】</span>
+                        将实验室的开源项目 Demo 经历，重新包装贴合 AI 产品经理的<strong>“需求洞察与原型设计”</strong>素质要求，提高机器算法初筛通过率。
+                    </div>
+                </div>
+                
+                <div class="orbit-node node-bl">
+                    <h4>🚀 能力培养</h4>
+                    <div class="default-text">经验积累<br><span style="font-size:0.85em; color:var(--sky-blue)">(悬停查看详情)</span></div>
+                    
+                    <div class="hover-content">
+                        <span class="method-tag">【方法论】</span>
+                        利用政策生效的时间差，提前布局核心技术底座。如果不清楚方向，就多去面试与试错。
+                        <span class="method-tag">【实战策略】</span>
+                        在真实的面试“拷打”中感受市场风向与自身能力的缺口，<strong>以面代练</strong>，倒逼大学期间进行关键技能（如算法应用、逻辑表达）的靶向储备。
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="reference" class="page">
+            <h1>研究成果开源与文献致谢</h1>
+            
             <div class="glass-panel">
-                <h2>一、 当代高新技术企业面试全景</h2>
-                <p>针对 AI 与具身智能等新质生产力核心岗位，当前一线大厂的考核极其硬核，通常包含 3-4 轮<span class="cite"></span>：</p>
-                <ol>
-                    <li><strong>在线笔试/机试 (OA)：</strong> 以算法题为主，作为硬性淘汰标准，考核逻辑思维与代码熟练度<span class="cite"></span>。</li>
-                    <li><strong>技术一面 (基础与代码)：</strong> 要求“手撕代码”，考察数据结构、系统底层逻辑及代码的鲁棒性<span class="cite"></span>。</li>
-                    <li><strong>技术二/三面 (项目深挖)：</strong> 压测简历项目，看重技术选型的原因（为什么这么做）与瓶颈攻坚能力<span class="cite"></span>。</li>
-                    <li><strong>HR 面：</strong> 评估抗压能力与自我驱动力<span class="cite"></span>。</li>
-                </ol>
-                <p>在具体技能上，企业明确要求除了精通 C++/Python，还需掌握 ROS2、PID/MPC/LQR 等控制算法，以及强化学习与仿真验证平台<span class="cite"></span>。</p>
+                <h2>一、 成果落地：简面 (SimpleResume) 开源平台</h2>
+                <p>基于合作共赢思想，我们不仅仅停留在理论，更将破局策略转化为生产力工具。项目组主导开发了 <strong>AI 赋能的简历制作桌面系统——“简面”</strong>。平台接入大模型 API，能根据目标岗位信息对个人杂乱的经历进行智能解析、模块化拆解与润色对齐，最终一键导出高质感 PDF。</p>
+                
+                <div style="margin-top: 25px; display: flex; gap: 20px; flex-wrap: wrap;">
+                    <a href="https://github.com/Ice-cream060/resume_for_you" target="_blank" class="link-btn">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                        获取简面客户端 (GitHub 开源)
+                    </a>
+                    <a href="https://github.com/Ice-cream060/xi_reserch_html" target="_blank" class="link-btn" style="background: linear-gradient(135deg, #475569, #64748b);">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+                        本报告前端源码 (GitHub 开源)
+                    </a>
+                </div>
             </div>
 
             <div class="glass-panel">
-                <h2>二、 简历作为突破口的“求职三步曲”</h2>
-                <p>基于对市场的深刻洞察，我们给出以下求职策略<span class="cite"></span>：</p>
-                <ul>
-                    <li><strong>寻找新岗位：</strong> 瞄准国家重点投入的领域、初创转型企业以及大厂的新赛道业务线<span class="cite"></span>。</li>
-                    <li><strong>提前布局培养：</strong> 把握政策生效与市场响应的时间差，结合个人兴趣，提前培养前沿硬核技术能力<span class="cite"></span>。</li>
-                    <li><strong>极致优化简历：</strong> 根据新赛道岗位要求，摒弃花哨排版，运用结构化语言精准包装技能与项目逻辑，迎合机器初筛<span class="cite"></span>。</li>
+                <h2>二、 核心参考文献及外链</h2>
+                <ul style="font-size: 0.95rem;">
+                    <li>中共中央文献. 《中共中央关于进一步全面深化改革 推进中国式现代化的决定》. 2024年7月.</li>
+                    <li>广东省人民政府办公厅. 《广东省加快培育发展新赛道引领现代化产业体系建设行动规划》.</li>
+                    <li>智联招聘、翰德趋势. 《2026年Q1就业市场洞察与应届生求职报告》.</li>
+                    <li>大疆车载 (卓驭科技) 与萝卜快跑 (ADFM大模型) 官方白皮书与财报数据.</li>
                 </ul>
-                
-                <div class="highlight-box">
-                    <h3 style="margin-top: 0;">💡 实战破局：简面 (SimpleResume) 开源平台</h3>
-                    <p>理论必须结合实践。为了切实帮助同学们在投递环节脱颖而出，<strong>本人基于当前大模型能力，主导开发并开源了“简面” (SimpleResume) AI 写简历桌面软件</strong><span class="cite"></span>。</p>
-                    <p style="margin-bottom: 0;">该系统利用 AI 代理技术，能够精准分析并拆解求职者的技术栈，深度切合高新技术岗位的 HR 筛选逻辑，自动生成结构化、高纯净度的专业文本简历。通过技术赋能，帮助我们在新质生产力的时代洪流中，精准锚定属于自己的定位与未来。</p>
-                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 50px; color: var(--text-muted);">
+                <h3 style="margin-bottom: 20px;">特别鸣谢 (2026年5月)</h3>
+                <p><strong>人工智能学院：</strong> 凌润林、庞荣欣、吴思桐、黄俊杰、蔡博琳</p>
+                <p><strong>集成电路与光电芯片学院：</strong> 周矛、曹亿基 &nbsp;|&nbsp; <strong>交通与物流学院：</strong> 陈浩楠</p>
+                <p style="font-size: 0.9rem; margin-top: 15px;">思路指导：马克思主义原理、《资本论》结构逻辑<br>工具支持：豆包 (内容梳理)、大语言模型 (前端构建)</p>
+                <p style="font-weight: bold; color: var(--academic-blue); margin-top: 30px; font-size: 1.1rem; letter-spacing: 2px;">“欢迎各位老师、同学批评指正”</p>
             </div>
         </div>
 
     </main>
 
     <script>
-        // SPA 页面平滑切换逻辑
+        // === 页面平滑切换与路由引擎 ===
         function switchPage(pageId) {
-            document.querySelectorAll('.page').forEach(page => {
-                page.classList.remove('active');
-            });
-            document.querySelectorAll('nav a').forEach(nav => {
-                nav.classList.remove('active');
-            });
+            document.querySelectorAll('.page').forEach(page => page.classList.remove('active'));
+            document.querySelectorAll('nav a').forEach(nav => nav.classList.remove('active'));
             
             document.getElementById(pageId).classList.add('active');
             document.querySelector(`nav a[href="#${pageId}"]`).classList.add('active');
             
             window.scrollTo({ top: 0, behavior: 'smooth' });
 
-            if(pageId === 'model') {
-                initCanvas();
-            }
+            // 触发特定页面的引擎
+            if(pageId === 'model') initCanvas();
+            if(pageId === 'employment') triggerCountUp();
         }
 
-        // Canvas 河海模型交互逻辑 (学术冰川蓝水系色调)
+        // === 动态数据可视化 (Count Up Animation) ===
+        let hasCounted = false;
+        function animateValue(obj, start, end, duration) {
+            let startTimestamp = null;
+            const step = (timestamp) => {
+                if (!startTimestamp) startTimestamp = timestamp;
+                const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                const easeOut = 1 - Math.pow(1 - progress, 4);
+                let current = start + (end - start) * easeOut;
+                
+                obj.innerHTML = (end % 1 !== 0) ? current.toFixed(1) : Math.floor(current);
+                
+                if (progress < 1) {
+                    window.requestAnimationFrame(step);
+                } else {
+                    obj.innerHTML = end; 
+                }
+            };
+            window.requestAnimationFrame(step);
+        }
+
+        function triggerCountUp() {
+            if(hasCounted) return;
+            const numbers = document.querySelectorAll('.count-num');
+            numbers.forEach(num => {
+                const target = parseFloat(num.getAttribute('data-target'));
+                animateValue(num, 0, target, 2000); // 2秒动画
+            });
+            hasCounted = true; 
+        }
+
+        // 引入 IntersectionObserver 自动检测进入就业页
+        document.addEventListener("DOMContentLoaded", () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting && entry.target.id === 'stats-container') {
+                        triggerCountUp();
+                    }
+                });
+            }, { threshold: 0.5 });
+            
+            const statsContainer = document.getElementById('stats-container');
+            if(statsContainer) observer.observe(statsContainer);
+        });
+
+
+        // === Canvas 河海模型动画系统 (带交互停启) ===
         const canvas = document.getElementById('ecoCanvas');
         const ctx = canvas.getContext('2d');
-        const wrapper = document.getElementById('canvas-wrapper');
         let animationFrameId;
-        
+        let isCanvasVisible = false;
         let rainDensity = 0.05; 
-
-        // 鼠标交互控制降雨量
-        wrapper.addEventListener('mousedown', () => rainDensity = 0.45);
-        wrapper.addEventListener('mouseup', () => rainDensity = 0.05);
-        wrapper.addEventListener('mouseleave', () => rainDensity = 0.05);
-
         let time = 0;
         const elements = { vapors: [], rains: [], rivers: [] };
 
         function initCanvas() {
+            const wrapper = document.getElementById('canvas-wrapper');
             canvas.width = wrapper.clientWidth;
             canvas.height = wrapper.clientHeight;
             elements.vapors = []; elements.rains = []; elements.rivers = [];
+            isCanvasVisible = true;
             if(animationFrameId) cancelAnimationFrame(animationFrameId);
             animateCanvas();
         }
 
         function animateCanvas() {
+            if(!isCanvasVisible) return; 
             ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-            // 1. 生成物理粒子 (冷调白/蓝)
-            if (Math.random() < 0.25) { // 蒸汽 (半透明白)
-                elements.vapors.push({ x: 120 + Math.random() * 280, y: 400, speed: 0.7 + Math.random(), size: Math.random() * 5 + 2, alpha: 0.65 });
-            }
-            if (Math.random() < rainDensity) { // 雨滴 (晴空蓝)
-                elements.rains.push({ x: 450 + Math.random() * 400, y: 120, speed: 5 + Math.random() * 4, length: 15 + Math.random() * 12 });
-            }
-            if (Math.random() < 0.35) { // 浪花粒子
-                elements.rivers.push({ x: canvas.width, y: 400 + Math.random() * 70, speed: 2.5 + Math.random() * 2, size: Math.random() * 4 + 1 });
-            }
+            // 1. 生成粒子
+            if (Math.random() < 0.25) elements.vapors.push({ x: 120 + Math.random() * 280, y: 400, speed: 0.7 + Math.random(), size: Math.random() * 5 + 2, alpha: 0.65 });
+            if (Math.random() < rainDensity) elements.rains.push({ x: 450 + Math.random() * 400, y: 120, speed: 5 + Math.random() * 4, length: 15 + Math.random() * 12 });
+            if (Math.random() < 0.35) elements.rivers.push({ x: canvas.width, y: 400 + Math.random() * 70, speed: 2.5 + Math.random() * 2, size: Math.random() * 4 + 1 });
 
-            // 2. 绘制时代海浪 (动态正弦波 - 浅海蓝)
+            // 2. 时代海浪
             ctx.fillStyle = 'rgba(59, 130, 246, 0.2)'; 
             ctx.beginPath();
             ctx.moveTo(0, canvas.height);
-            for (let i = 0; i <= canvas.width / 2; i++) {
-                ctx.lineTo(i, 400 + Math.sin(i * 0.015 + time) * 18);
-            }
-            ctx.lineTo(canvas.width / 2, canvas.height);
-            ctx.fill();
+            for (let i = 0; i <= canvas.width / 2; i++) ctx.lineTo(i, 400 + Math.sin(i * 0.015 + time) * 18);
+            ctx.lineTo(canvas.width / 2, canvas.height); ctx.fill();
 
-            // 3. 绘制升腾水蒸气
+            // 3. 水蒸气
             for (let i = elements.vapors.length - 1; i >= 0; i--) {
                 const v = elements.vapors[i];
-                v.y -= v.speed;
-                v.x += Math.sin(v.y * 0.04) * 1.2;
-                v.alpha -= 0.0025;
-                if (v.alpha <= 0 || v.y < 100) {
-                    elements.vapors.splice(i, 1);
-                } else {
-                    ctx.fillStyle = `rgba(14, 165, 233, ${v.alpha})`; // 冰蓝蒸汽
-                    ctx.beginPath();
-                    ctx.arc(v.x, v.y, v.size, 0, Math.PI * 2);
-                    ctx.fill();
-                }
+                v.y -= v.speed; v.x += Math.sin(v.y * 0.04) * 1.2; v.alpha -= 0.0025;
+                if (v.alpha <= 0 || v.y < 100) elements.vapors.splice(i, 1);
+                else { ctx.fillStyle = `rgba(14, 165, 233, ${v.alpha})`; ctx.beginPath(); ctx.arc(v.x, v.y, v.size, 0, Math.PI * 2); ctx.fill(); }
             }
 
-            // 4. 绘制云层 (政策中央 - 纯白微蓝影)
+            // 4. 云层
             ctx.fillStyle = 'rgba(255, 255, 255, 0.95)';
-            ctx.shadowColor = 'rgba(30, 64, 175, 0.15)';
-            ctx.shadowBlur = 20;
+            ctx.shadowColor = 'rgba(30, 64, 175, 0.15)'; ctx.shadowBlur = 20;
             ctx.beginPath();
-            ctx.arc(580, 100, 55, 0, Math.PI * 2);
-            ctx.arc(670, 75, 75, 0, Math.PI * 2);
-            ctx.arc(760, 100, 55, 0, Math.PI * 2);
-            ctx.fill();
-            ctx.shadowBlur = 0; 
+            ctx.arc(580, 100, 55, 0, Math.PI * 2); ctx.arc(670, 75, 75, 0, Math.PI * 2); ctx.arc(760, 100, 55, 0, Math.PI * 2);
+            ctx.fill(); ctx.shadowBlur = 0; 
 
-            // 5. 绘制降雨 (政策下发)
-            ctx.strokeStyle = 'rgba(59, 130, 246, 0.5)';
-            ctx.lineWidth = 2;
+            // 5. 政策降雨
+            ctx.strokeStyle = 'rgba(59, 130, 246, 0.5)'; ctx.lineWidth = 2;
             for (let i = elements.rains.length - 1; i >= 0; i--) {
                 const r = elements.rains[i];
-                r.y += r.speed;
-                r.x -= 1.8; 
-                if (r.y > 400) {
-                    elements.rains.splice(i, 1);
-                } else {
-                    ctx.beginPath();
-                    ctx.moveTo(r.x, r.y);
-                    ctx.lineTo(r.x - 1.8, r.y + r.length);
-                    ctx.stroke();
-                }
+                r.y += r.speed; r.x -= 1.8; 
+                if (r.y > 400) elements.rains.splice(i, 1);
+                else { ctx.beginPath(); ctx.moveTo(r.x, r.y); ctx.lineTo(r.x - 1.8, r.y + r.length); ctx.stroke(); }
             }
 
-            // 6. 绘制河流与奔涌浪花
-            ctx.fillStyle = 'rgba(30, 64, 175, 0.1)'; // 河流底色 (深蓝)
-            ctx.fillRect(canvas.width / 2, 380, canvas.width / 2, 120);
-            
-            ctx.fillStyle = '#ffffff'; // 纯白浪花
+            // 6. 河流浪花
+            ctx.fillStyle = 'rgba(30, 64, 175, 0.1)'; ctx.fillRect(canvas.width / 2, 380, canvas.width / 2, 120);
+            ctx.fillStyle = '#ffffff'; 
             for (let i = elements.rivers.length - 1; i >= 0; i--) {
                 const r = elements.rivers[i];
-                r.x -= r.speed;
-                r.y += Math.sin(r.x * 0.08) * 0.8;
-                if (r.x < canvas.width / 2 - 40) {
-                    elements.rivers.splice(i, 1);
-                } else {
-                    ctx.beginPath();
-                    ctx.arc(r.x, r.y, r.size, 0, Math.PI * 2);
-                    ctx.fill();
-                }
+                r.x -= r.speed; r.y += Math.sin(r.x * 0.08) * 0.8;
+                if (r.x < canvas.width / 2 - 40) elements.rivers.splice(i, 1);
+                else { ctx.beginPath(); ctx.arc(r.x, r.y, r.size, 0, Math.PI * 2); ctx.fill(); }
             }
-
-            // 7. 概念文本标识
-            ctx.font = '500 15px "Noto Sans SC"';
-            ctx.fillStyle = '#1e293b';
-            ctx.fillText('🌊 时代浪潮 (现象与困境)', 40, 440);
-            ctx.fillText('💨 升腾水蒸气 (提炼总结)', 160, 260);
-            ctx.fillText('☁️ 汇聚云层 (中央政策统筹)', 590, 65);
-            ctx.fillText('🌧️ 政策雨水 (落实与响应)', 760, 280);
-            ctx.fillText('🏞️ 市场河流与个体浪花', 620, 440);
 
             time += 0.04;
             animationFrameId = requestAnimationFrame(animateCanvas);
         }
 
-        // 窗口大小变动自适应
+        // 监听 Canvas 离开视野以节省性能
+        document.getElementById('model').addEventListener('transitionend', () => {
+             if(!document.getElementById('model').classList.contains('active')) {
+                 isCanvasVisible = false;
+                 if(animationFrameId) cancelAnimationFrame(animationFrameId);
+             }
+        });
+
         window.addEventListener('resize', () => {
-            if(document.getElementById('model').classList.contains('active')){
-                initCanvas();
-            }
+            if(document.getElementById('model').classList.contains('active')) initCanvas();
         });
 
     </script>
